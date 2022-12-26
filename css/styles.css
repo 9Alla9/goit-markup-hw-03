@@ -53,6 +53,8 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-right: 77px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
+    drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 .header-logo-studio {
   color: #2e2f42;
@@ -83,15 +85,16 @@ img {
   flex-grow: 0;
   margin-bottom: 24px;
 }
-.header-link:hover {
-  color: #51d2ef;
+.header-link:hover,
+.hero-btn:hover {
+  color: #2dbbd4;
 }
 .header-link:focus {
-  color: #276ac6;
+  color: #1badda;
 }
 .header-mailto:hover,
 .header-tel:hover {
-  color: #17fa17;
+  color: #48cbec;
 }
 .header-mailto,
 .header-tel {
@@ -153,7 +156,10 @@ img {
   margin: 0 auto;
 }
 /*------text--------*/
-
+.text {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
 .text-list {
   display: flex;
 }
@@ -287,6 +293,7 @@ img {
   border-radius: 4px;
   padding: 8px 16px;
   margin-right: 24px;
+  cursor: pointer;
 }
 .features-btn:hover {
   color: #ffffff;
@@ -309,14 +316,12 @@ img {
 .project-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
-  padding: 72px;
-  padding-left: 120px;
+  row-gap: 48px;
+  column-gap: 24px;
 }
 .card-link {
-  text-decoration: none;
-  width: 360px;
-  height: 300px;
+  display: flex;
+  flex-direction: column;
 }
 .project-text {
   margin-top: 0;
@@ -326,26 +331,23 @@ img {
   border-top: none;
 }
 .project-title {
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 24px;
-  letter-spacing: 0.02em;
+  font-weight: 500;
+  line-height: calc(24 / 20);
   color: #2e2f42;
+  font-weight: 600;
+  margin-top: 48px;
 }
 .project-item {
   border: 0.5px solid #f4f4fd;
   width: calc((100%- 48px) / 3);
 }
-.project-list > .project-item:nth-last-child(-n + 3) {
-  margin-bottom: 0px;
-}
-.project-list > .project-item:nth-child(3n) {
-  margin-right: 0;
+.project-item:not(:nth-child(3n)) {
+  margin-right: 24px;
 }
 .container-portfolio {
   border: 1px solid red;
   border-top: none;
-  padding: 32px 0 32px 16px;
+  padding: 48px 56px 48px 56px;
   border-bottom: 0.5px solid #f4f4fd;
   border-right: 0.5px solid #f4f4fd;
   border-left: 0.5px solid #f4f4fd;
