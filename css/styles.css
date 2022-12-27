@@ -48,13 +48,13 @@ img {
   font-weight: 800;
   font-size: 18px;
   line-height: 1.33;
-  display: flex;
-  align-items: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-right: 77px;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
-    drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
 }
 .header-logo-studio {
   color: #2e2f42;
@@ -80,21 +80,24 @@ img {
 .header-link {
   font-weight: 600;
   color: #2e2f42;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-  margin-bottom: 24px;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 40px;
 }
 .header-link:hover,
 .hero-btn:hover {
-  color: #2dbbd4;
+  color: #575757;
 }
 .header-link:focus {
-  color: #1badda;
+  color: #535353;
 }
 .header-mailto:hover,
 .header-tel:hover {
-  color: #48cbec;
+  color: #68696e;
 }
 .header-mailto,
 .header-tel {
@@ -127,11 +130,17 @@ img {
 }
 
 .hero-caption {
+  margin-bottom: 48px;
   font-size: 56px;
+  font-weight: 700;
   line-height: 1.07;
   text-align: center;
   color: #ffffff;
   margin-bottom: 48px;
+  width: 492px;
+  height: 120px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .hero-btn {
   font-family: "Roboto", sans-serif;
@@ -139,6 +148,7 @@ img {
   font-weight: 600;
   line-height: 19px;
   display: inline-block;
+  flex-direction: row;
   align-items: center;
   letter-spacing: 0.04em;
   color: #ffffff;
@@ -162,8 +172,10 @@ img {
 }
 .text-list {
   display: flex;
+  align-items: flex-start;
 }
-/*------.text-item {}--------*/
+/*------.text-item-----*/
+
 .text-title {
   color: var(--title-color);
   padding-bottom: 8px;
@@ -190,6 +202,7 @@ img {
   text-transform: capitalize;
   color: var(--title-color);
   padding-bottom: 72px;
+  padding-top: 0;
 }
 
 .about-list {
@@ -235,6 +248,11 @@ img {
 }
 .user-item {
   width: calc((100%-72px) / 4);
+  background: #ffffff;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
+  padding: 0px 0px 32px;
 }
 .user-quote {
   font-size: 16px;
@@ -276,9 +294,12 @@ img {
   max-width: 264px;
 }
 
-/*----features-----*/
+/* ----features--- */
+
+.features {
+  padding-bottom: 120px;
+}
 .features-btn {
-  padding: 12px 24px;
   border: 1px solid #e7e9fc;
   font-family: inherit;
   font-weight: 600;
@@ -286,8 +307,11 @@ img {
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
+  background: #f4f4fd;
+  color: #4d5ae5;
+  border: 1px solid #e7e9fc;
+  border-radius: 4px;
   letter-spacing: 0.04em;
-  background: #4d5ae5;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
@@ -297,9 +321,11 @@ img {
 }
 .features-btn:hover {
   color: #ffffff;
+  background: #4d5ae5;
 }
 .features-btn:focus {
   color: #ffffff;
+  background: #4d5ae5;
 }
 .features-list {
   display: flex;
@@ -309,19 +335,18 @@ img {
   padding-bottom: 72px;
   justify-content: center;
 }
-.project-list > .project-item {
-  margin-right: 24px;
-  margin-bottom: 48px;
-}
 .project-list {
   display: flex;
   flex-wrap: wrap;
-  row-gap: 48px;
-  column-gap: 24px;
+  gap: 24px;
+}
+.project-item {
+  width: calc((100%- 60px) / 3);
 }
 .card-link {
   display: flex;
   flex-direction: column;
+  width: 360px;
 }
 .project-text {
   margin-top: 0;
@@ -330,25 +355,19 @@ img {
   color: var(--text-color);
   border-top: none;
 }
+.project-title,
+.project-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0px 16px;
+  gap: 8px;
+}
 .project-title {
   font-weight: 500;
   line-height: calc(24 / 20);
   color: #2e2f42;
   font-weight: 600;
   margin-top: 48px;
-}
-.project-item {
-  border: 0.5px solid #f4f4fd;
-  width: calc((100%- 48px) / 3);
-}
-.project-item:not(:nth-child(3n)) {
-  margin-right: 24px;
-}
-.container-portfolio {
-  border: 1px solid red;
-  border-top: none;
-  padding: 48px 56px 48px 56px;
-  border-bottom: 0.5px solid #f4f4fd;
-  border-right: 0.5px solid #f4f4fd;
-  border-left: 0.5px solid #f4f4fd;
 }
