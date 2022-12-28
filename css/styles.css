@@ -53,7 +53,6 @@ img {
   line-height: 1.33;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  margin-right: 77px;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -64,6 +63,7 @@ img {
 }
 .header-logo-web {
   color: var(--logo-web-color);
+  margin-right: 76px;
 }
 .header-list {
   display: flex;
@@ -76,9 +76,11 @@ img {
   align-items: center;
   margin-right: auto;
 }
+.header {
+  border-bottom: 0.5px solid #e7e9fc;
+}
 .header > .container {
   display: flex;
-  border-bottom: 0.5px solid #e7e9fc;
 }
 /*----.header-item----*/
 .header-link {
@@ -130,9 +132,8 @@ img {
   background-color: #2e2f42;
   text-align: center;
   margin: auto;
-  padding-top: 192px;
-  padding-bottom: 192px;
-  width: 1440px;
+  padding-top: 188px;
+  padding-bottom: 188px;
 }
 
 .hero-caption {
@@ -144,7 +145,6 @@ img {
   color: #ffffff;
   margin-bottom: 48px;
   width: 492px;
-  height: 120px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -171,7 +171,6 @@ img {
 /*------text--------*/
 .text {
   padding-top: 120px;
-  padding-bottom: 120px;
 }
 .text-list {
   display: flex;
@@ -217,7 +216,6 @@ img {
 .about-list {
   display: flex;
   gap: 24px;
-  padding-bottom: 120px;
 }
 /*------.about-item --------*/
 
@@ -225,7 +223,6 @@ img {
 
 .section-user {
   background: #f4f4fd;
-  width: 1440px;
   text-align: center;
   margin: auto;
 }
@@ -241,8 +238,7 @@ img {
   flex: none;
 }
 .user-logoo {
-  padding-top: 120px;
-  padding-bottom: 72px;
+  margin-bottom: 72px;
   font-style: normal;
   font-weight: 700;
   font-size: 36px;
@@ -255,7 +251,6 @@ img {
 .user-list {
   display: flex;
   gap: 24px;
-  padding-bottom: 120px;
   align-items: center;
   text-align: center;
 }
@@ -282,9 +277,6 @@ img {
   background-color: #2e2f42;
   padding-top: 100px;
   padding-bottom: 100px;
-  width: 1440px;
-  height: 310px;
-  text-align: center;
   margin: auto;
 }
 .footer-logo-web,
@@ -313,12 +305,14 @@ img {
 }
 
 /* ----features--- */
-
+.Portfolio {
+  padding-top: 96px;
+  padding-bottom: 120px;
+}
 .features-item {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  padding: 8px 16px;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
@@ -330,6 +324,7 @@ img {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
+  size: 16px;
   color: #ffffff;
   cursor: pointer;
 }
@@ -342,6 +337,7 @@ img {
   color: #4d5ae5;
   letter-spacing: 0.04em;
   text-align: center;
+  size: 16px;
   cursor: pointer;
 }
 .features-btn-three {
@@ -351,6 +347,7 @@ img {
   width: 78px;
   height: 48px;
   color: #4d5ae5;
+  size: 16px;
   cursor: pointer;
 }
 .features-btn-four {
@@ -360,6 +357,7 @@ img {
   border: 1px solid #e7e9fc;
   border-radius: 4px;
   color: #4d5ae5;
+  size: 16px;
   cursor: pointer;
 }
 .features-btn-five {
@@ -370,51 +368,53 @@ img {
   border-radius: 4px;
   color: #4d5ae5;
   cursor: pointer;
+  size: 16px;
 }
 .features-btn-one:hover,
 .features-btn-two:hover,
 .features-btn-three:hover,
 .features-btn-four:hover,
 .features-btn-five:hover {
-  background: #e7e9fc;
+  background: #404bbf;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 }
 .features-list {
   display: flex;
   flex-wrap: wrap;
   font-size: 20px;
-  padding-bottom: 72px;
+  margin-bottom: 72px;
   justify-content: center;
+  gap: 24px;
 }
 .project-list {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
 }
+.container-text {
+  border-top: none;
+  background: #ffffff;
+  border: 0.5px solid #f4f4fd;
+}
 .project-item {
-  border: 1px solid #e7e9fc;
   max-width: 360px;
   height: 420px;
-}
-.card-link {
-  display: flex;
-  flex-direction: column;
-  width: 360px;
+  margin-bottom: 30px;
 }
 .project-text {
-  margin-top: 0;
-  margin-bottom: 0;
   line-height: 1.5;
   color: var(--text-color);
   border-top: none;
   size: 16px;
+  margin-bottom: 32px;
 }
 .project-title {
   font-weight: 500;
   line-height: calc(24 / 20);
   color: #2e2f42;
-  margin-top: 48px;
   size: 20px;
+  margin-top: 32px;
 }
 .project-title,
 .project-text {
@@ -422,6 +422,5 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 0px 16px;
-  gap: 8px;
+  padding: 8px 16px;
 }
