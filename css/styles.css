@@ -218,9 +218,12 @@ img {
   text-align: center;
   margin: auto;
 }
-.user-logo {
+.team-memb {
   padding-top: 32px;
-  padding-bottom: 8px;
+  padding-bottom: 32px;
+}
+.user-logo {
+  margin-bottom: 8px;
   font-weight: 700;
   font-size: 20px;
   line-height: calc(24 / 20);
@@ -252,14 +255,12 @@ img {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
-  padding: 0px 0px 32px;
 }
 .user-quote {
   font-size: 16px;
   line-height: calc(24 / 16);
   letter-spacing: 0.02em;
   color: #434455;
-  margin-bottom: 32px;
   flex: none;
 }
 
@@ -312,46 +313,41 @@ img {
 .features-btn-one {
   width: 69px;
   height: 48px;
-  background: #4d5ae5;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
   font-size: 16px;
-  color: #ffffff;
-  border: azure;
+  color: #4d5ae5;
+  background: #f4f4fd;
+  border: 1px solid #e7e9fc;
   cursor: pointer;
+  border-radius: 4px;
 }
 .features-btn-two {
   width: 116px;
   height: 48px;
-  background: #4d5ae5;
   border: 1px solid #e7e9fc;
   border-radius: 4px;
-  color: #ffffff;
   letter-spacing: 0.04em;
   text-align: center;
   font-size: 16px;
-  border: azure;
+  color: #4d5ae5;
+  background: #f4f4fd;
   cursor: pointer;
 }
 .features-btn-three {
-  background: #4d5ae5;
   border: 1px solid #e7e9fc;
-  border-radius: 4px;
+  color: #4d5ae5;
+  background: #f4f4fd;
   width: 78px;
   height: 48px;
-  color: #ffffff;
   font-size: 16px;
-  border: azure;
   cursor: pointer;
 }
 .features-btn-four {
   width: 101px;
   height: 48px;
-  background: #4d5ae5;
   border: 1px solid #e7e9fc;
   border-radius: 4px;
-  color: #ffffff;
+  color: #4d5ae5;
+  background: #f4f4fd;
   font-size: 16px;
   border: azure;
   cursor: pointer;
@@ -359,10 +355,10 @@ img {
 .features-btn-five {
   width: 126px;
   height: 48px;
-  background: #4d5ae5;
   border: 0.5px solid #e7e9fc;
   border-radius: 4px;
-  color: #ffffff;
+  color: #4d5ae5;
+  background: #f4f4fd;
   cursor: pointer;
   border: azure;
   font-size: 16px;
@@ -373,7 +369,21 @@ img {
 .features-btn-four:hover,
 .features-btn-five:hover {
   background: #404bbf;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  color: #ffffff;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+}
+
+.features-btn-one:focus,
+.features-btn-two:focus,
+.features-btn-three:focus,
+.features-btn-four:focus,
+.features-btn-five:focus {
+  background: #404bbf;
+  color: #ffffff;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
 }
 .features-list {
